@@ -1,11 +1,13 @@
-const { Router } = require('express');
+'use strict';
+
+const {Router} = require(`express`);
 
 const authRouter = new Router();
 
-authRouter.get('/register', (req, res) => {
+authRouter.get(`/register`, (req, res) => {
   res.send(req.originalUrl);
 });
-authRouter.get('/login', (req, res) => {
+authRouter.get(`/login`, (req, res) => {
   res.send(req.originalUrl);
 });
 

@@ -1,9 +1,11 @@
-const express = require('express');
-const mainRouter = require('./routes/main');
-const authRouter = require('./routes/auth');
-const searchRouter = require('./routes/articles');
-const cabinetRouter = require('./routes/cabinet');
-const articlesRouter = require('./routes/articles');
+'use strict';
+
+const express = require(`express`);
+const mainRouter = require(`./routes/main`);
+const authRouter = require(`./routes/auth`);
+const searchRouter = require(`./routes/articles`);
+const cabinetRouter = require(`./routes/cabinet`);
+const articlesRouter = require(`./routes/articles`);
 
 const DEFAULT_PORT = 8080;
 
@@ -16,6 +18,6 @@ app.use(`/my`, cabinetRouter);
 app.use(`/articles`, articlesRouter);
 
 app.listen(
-  DEFAULT_PORT,
-  () => console.log(`Server is running on port: ${DEFAULT_PORT}`)
+    DEFAULT_PORT,
+    () => console.log(`Server is running on port: ${DEFAULT_PORT}`)
 );

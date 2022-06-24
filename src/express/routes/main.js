@@ -1,8 +1,10 @@
-const { Router } = require('express');
+'use strict';
+
+const {Router} = require(`express`);
 
 const mainRouter = new Router();
 
-mainRouter.get('/', (req, res) => {
+mainRouter.get(`/`, (req, res) => {
   res.send(req.originalUrl);
 });
 
